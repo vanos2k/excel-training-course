@@ -1,0 +1,20 @@
+{
+  "name": "excel-course",
+  "version": "1.0.0",
+  "description": "pure js excel app",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanos2k/excel-training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanos2k/excel-training/issues"
+  },
+  "homepage": "https://github.com/vanos2k/excel-training#readme",
+  "private": true
+}
