@@ -7,7 +7,9 @@
   },
   "rules": {
     "linebreak-style": ["error", "windows"],
-    "require-jsdoc": "off"
+    "require-jsdoc": "off",
+    "arrow-parens": "off",
+    "operator-linebreak": "off"
   },
   "extends": ["eslint:recommended", "google"]
 }
