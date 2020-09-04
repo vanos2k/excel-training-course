@@ -51,14 +51,60 @@ class Dom {
     return this.$el.getBoundingClientRect();
   }
 
+  findOne(selector) {
+    return $(this.$el.querySelector(selector));
+  }
+
   findAll(selector) {
     return this.$el.querySelectorAll(selector);
+  }
+
+  addClass(className) {
+    this.$el.classList.add(className);
+    return this;
+  }
+
+  removeClass(className) {
+    this.$el.classList.remove(className);
+    return this
+  }
+
+  // get text() {
+  //   return this.$el.textContent;
+  // }
+  //
+  // set text(text) {
+  //   this.$el.textContent = text;
+  // }
+  text(text) {
+    if (typeof text === 'string') {
+      this.$el.textContent = text;
+    }
+    if (this.$el.tagName.toLowerCase() === 'input') {
+      return this.$el.value.trim();
+    }
+    return this.$el.textContent.trim();
   }
 
   css(styles = {}) {
     Object.keys(styles).forEach(key => {
       this.$el.style[key] = styles[key];
     });
+  }
+  id(parse) {
+    if (parse) {
+      const parsed = this.id().split(':');
+      return {
+        row: +parsed[0],
+        col: +parsed[1],
+      };
+    }
+    return this.data.id;
+  }
+
+  focus() {
+    this.$el.focus();
+    return this;
   }
 }
 
